@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Outside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&family=Roboto+Slab:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/807931b0b9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="top">
+        <a href="" class="btn">Announcement</a>
+        <p>How we are responding to <bold>COVID-19</bold>
+        </p>
+    </div>
+    <div id="navbar">
+        <img src="img/logo.png" alt="Image not found" class="logo">
+        <p>A C M E</p>
+        <nav>
+            <ul class="menu-item">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-cart-shopping shopping"></i>
+        <i class="fa-solid fa-bars hidden" onclick="togglemenu()"></i>
+    </div>
+    <section id="services">
+        <header class="serving-heading">
+            <h1>Serving you since 1989.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam molestiae blanditiis animi officiis est
+                totam, nulla magni, ratione voluptatibus, distinctio ullam cum eveniet ea! Expedita.</p>
+            <a href="">Shop Merch</a>
+        </header>
+    </section>
+    <section id="support">
+        <div class="wrapper">
+            <div class="box-a">
+                <p>WAYS TO SUPPORT</p>
+                <h2>Support Acme Outdors.</h2>
+            </div>
+            <div class="box-b">
+                <p>COVID-19 is Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, magni. Sapiente sunt ipsam quisquam quae aperiam exercitationem saepe natus tempore itaque facilis. At, reiciendis tenetur?</p>
+
+            </div>
+            <div class="boxes">
+                <div class="big-box-a">
+                    <p>01</p>
+                    <h2>SHOP PRODUCTS</h2>
+                    <div class="circle"></div>
+                </div>
+                <div class="big-box-b">
+                    <P>02</P>
+                    <h2>DONATE</h2>
+                    <div class="triangle-1"></div>
+                    <div class="triangle-2"></div>
+                </div>
+                <div class="big-box-c">
+                    <P>03</P>
+                    <h2>BUY GIFT CARDS</h2>
+                    <div class="rectangle"></div>
+                </div>
+                <div class="box-com-a">
+                   <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error optio explicabo incidunt nobis nesciunt. Eius reiciendis, ab molestiae beatae omnis ut aliquam laborum at ea.</p>
+                </div>
+                <div class="box-com-b">
+                   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo quis vitae quos delectus, incidunt neque, id, omnis ratione quisquam dolor pariatur aliquid? Nihil, accusamus!</p>
+                </div>
+                <div class="box-com-c">
+                   <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti velit libero vel recusandae blanditiis cum nesciunt incidunt mollitia commodi quia, corporis obcaecati ab quisquam facilis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="safe">
+        <div class="covid">
+            <h2>How we're Keeping you safe during COVID-19</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipitu asis.</p>
+            <p>Lorem ipsum dolor sit amet manda muntu.</p>
+            <p>Lorem ipsum hersay gaiop la.</p>
+            <a href="#">Read Our Development</a>
+        </div>
+    </section>
+    <footer>
+        <p>Travel Safe Towards Your Destination</p>
+        <h2>Open 24/7/365.</h2>
+    </footer>
+
+    <script>
+        let menu_items=document.getElementsByClassName("menu-item");
+        let service=document.getElementById("services");
+        function togglemenu(){
+            if(menu_items[0].style.maxHeight=="0px"){
+                service.style.marginTop="160px";
+                menu_items[0].style.maxHeight="160px";
+            }
+            else{
+                service.style.marginTop="0px";
+                menu_items[0].style.maxHeight="0px";
+            }
+        }
+    </script>
+</body>
+
+</html>

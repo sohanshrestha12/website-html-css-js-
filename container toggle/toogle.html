@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            max-width: 100%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .another-container {
+            height: 100vh;
+            width: 100vw;
+            max-width: 100%;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .active{
+            background-color: black ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hi this is container</h1>
+    </div>
+    <div class="another-container">
+        <h1>Hey this is 2nd container</h1>
+    </div>
+</body>
+<script>
+    window.onload=()=>{
+        let first=document.querySelector('.container');
+        let second=document.querySelector('.another-container');
+        window.onscroll=()=>{
+            first.classList.toggle("active",scrollY>=100);
+        }
+    }
+</script>
+</html>

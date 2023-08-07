@@ -1,0 +1,1737 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+    --bg: #EDEDED;
+    --main-color: #B1B493;
+    --light-color: #D9D9D9;
+}
+
+html {
+    font-size: 10px;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    background: var(--bg);
+}
+
+
+/* navbar */
+
+#navbar {
+    display: flex;
+    padding: 3rem 20rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#menu {
+    display: none;
+}
+#link {
+    position: relative;
+    flex: 1;
+    z-index: 999;
+}
+
+#navbar h1 a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#navbar ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#navbar ul li {
+    list-style: none;
+    text-decoration: none;
+    padding: 0 1.5rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: black;
+    padding: 3.9px 0;
+    font-weight: 600;
+    position: relative;
+}
+
+#link .links::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    background-color: var(--main-color);
+
+}
+
+#link .links:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.active {
+    position: relative;
+    color: var(--main-color) !important;
+    transition: 0.3s ease-out;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--main-color);
+}
+
+/* Home  Section */
+.container {
+    height: 90vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 7rem;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 75%;
+    z-index: -1;
+    background: url(../img/portfolio1.png) right top/cover no-repeat;
+}
+
+.buttons .btn:last-child:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.container p {
+    color: var(--main-color);
+    font-weight: 600;
+    margin: 0.8rem 0;
+}
+
+.container span {
+    color: var(--main-color);
+}
+
+.container h1 {
+    margin: 0.8rem 0;
+}
+
+.buttons {
+    margin-top: 1rem;
+}
+
+.buttons .btn:first-child {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.buttons .btn:last-child {
+    background-color: white;
+    margin-left: 1rem;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* About section  */
+.wrapper {
+    display: grid;
+    grid-template-areas:
+        'img img about about'
+        'img img about about'
+        'img img hobbies hobbies'
+        'img img hobbies hobbies'
+        'img img gap gap';
+
+}
+
+.img {
+    height: 550px;
+    grid-area: img;
+    margin: 0;
+    padding: 0;
+    box-shadow: -2px 0 7px #888888;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+.About-me {
+    grid-area: about;
+    padding: 7rem 0 3rem 10rem;
+    height: fit-content;
+}
+
+.About-me h1 {
+    padding: 1.3rem 0;
+}
+
+.wrapper p:first-child {
+    color: var(--main-color);
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
+    padding: 1.3rem 0;
+    font-weight: 600;
+}
+
+.About-me p:nth-child(4) {
+    margin-top: 2rem;
+}
+
+.hobbies {
+    grid-area: hobbies;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    bottom: 8.8rem;
+    left: 40rem;
+    padding: 0 0 0 10rem;
+}
+
+.hobbies div {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.hobbies img {
+    height: 100%;
+}
+
+.hobbies div p {
+    margin-left: 1.2rem;
+}
+
+/* skills section  */
+.skill-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.Myskill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-circle {
+    padding: 7rem 0 13rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 7rem;
+}
+
+.circle-box {
+    height: 24rem;
+    background-color: white;
+    box-shadow: 0 0 8px 2px #888888;
+    border-radius: 0.5rem;
+}
+
+.Myskill p:first-child {
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+
+}
+
+.Myskill p:last-child {
+    color: var(--main-color);
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.progress {
+    fill: none;
+    stroke-width: 12;
+    stroke: var(--main-color);
+    stroke-dasharray: 377;
+    transform-origin: 50% 60%;
+    transform: rotate(-90deg)
+}
+
+.percent {
+    stroke-dashoffset: calc(377*34/100);
+}
+
+.percent1 {
+    stroke-dashoffset: calc(377*43/100);
+}
+
+.percent2 {
+    stroke-dashoffset: calc(377*40/100);
+}
+
+.percent3 {
+    stroke-dashoffset: calc(377*70/100);
+}
+
+.percent4 {
+    stroke-dashoffset: calc(377*18/100);
+}
+
+.percent5 {
+    stroke-dashoffset: calc(377*50/100);
+}
+
+/* Service section  */
+.service-header {
+    display: flex;
+    padding: 2.3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-header p {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 7rem;
+    padding: 5rem 0;
+}
+
+.service-box {
+    height: 22rem;
+    background-color: white;
+    box-shadow: 0 0 8px 2px #888888;
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.service-box h2 {
+    margin-top: 3.9rem;
+}
+
+.service-circle {
+    height: 7.7rem;
+    width: 7.7rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 20%;
+    top: 0;
+    transform: translateY(-50%);
+    box-shadow: -0.3rem 0.3rem 2rem 0 #888888;
+    transition: 0.2s ease-out;
+}
+
+.service-circle img {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* project section  */
+.project-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-header p {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.project-wrapper {
+    padding: 2rem 5rem 13rem 5rem;
+}
+
+.project-box {
+    position: relative;
+    height: 40rem;
+    width: 30rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.img-content {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 1.5rem;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
+
+}
+
+.desc {
+    color: var(--main-color);
+    margin-top: 0.7rem;
+    font-weight: 600;
+}
+
+.img-content::before {
+    content: "";
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .6;
+    height: 100%;
+    width: 100%;
+}
+
+.img-content a {
+    z-index: 99;
+    color: white;
+    text-decoration: none;
+}
+
+.img-content p {
+    text-align: center;
+    font-size: 1.8rem;
+    word-break: break-word;
+    letter-spacing: 0.1rem;
+}
+
+.img-content p:nth-of-type(1) {
+    font-weight: 500;
+}
+
+.img-head {
+    font-weight: 700;
+    font-size: 2.7rem;
+    letter-spacing: 0.3rem;
+}
+
+.project-box:hover .img-content {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.project-box img {
+    height: 100%;
+    width: 100%;
+}
+
+.four img {
+    width: 200% !important;
+}
+
+.project-body {
+    padding-top: 5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+        'one two three four'
+        'five five six six'
+        'seven seven eight eight';
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+    background: url('../img/three.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+/* Contact section */
+.main-contact {
+    padding-bottom: 1.7rem;
+}
+
+.contact-header p {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    margin: 0 0 0 -2rem;
+}
+
+.contact-me {
+    padding: 1rem 2rem;
+}
+
+.contact-me form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-areas:
+        'one one two two'
+        'three three three three'
+        'four four four four'
+        'five five . .';
+    grid-gap: 2rem;
+
+}
+
+.contact-me h2 {
+    text-align: center;
+}
+
+.contact-me input[type="text"],
+.contact-me input {
+    padding: 1rem;
+    color: var(--main-color);
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+
+.contact-me::placeholder {
+    color: var(--main-color);
+
+}
+
+.contact-me textarea {
+    border-color: var(--main-color);
+    padding-left: 1rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+    max-width: 100%;
+    outline: none;
+    resize: none;
+}
+
+.contact-me input:nth-of-type(1) {
+
+    grid-area: one;
+}
+
+.contact-me input:nth-of-type(2) {
+    grid-area: two;
+}
+
+.contact-me input:nth-of-type(3) {
+    grid-area: three;
+}
+
+.contact-me textarea {
+    grid-area: four;
+}
+
+.contactme-wrapper {
+    flex-basis: 65%;
+}
+
+.contactme-wrapper {
+    background-color: #F5F3F3;
+}
+
+.contact-button {
+    grid-area: five;
+    background-color: var(--main-color);
+    width: fit-content;
+    color: white;
+}
+
+.contact-details {
+    flex-basis: 35%;
+    padding: 1rem 0 0 12rem;
+}
+
+.contact-details p {
+    margin-top: 0.6rem;
+    font-size: 1.4rem;
+}
+
+/* footer section  */
+.footer-wrapper {
+    margin-top: -3rem;
+    background-color: #F5F3F3;
+    padding: 0 20rem;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem 0 1rem 0;
+}
+
+.logos img {
+    height: 4.2rem;
+    margin: 0 0 0 2.5rem;
+}
+
+.end p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 0rem 0 2rem 0;
+    text-align: center;
+}
+
+
+/* Utility classes */
+.main-container {
+    padding: 0 20rem;
+    margin-bottom: 2.5rem;
+}
+
+.header {
+    font-size: 3rem;
+}
+
+.sec_header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    padding: 1.2rem 0 0 0;
+    font-weight: 500;
+    text-align: justify;
+    word-break: break-all;
+}
+
+.btn {
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    text-decoration: none;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 0 10px 10px #888888;
+    margin-bottom: 13rem;
+}
+
+
+/* media queries */
+@media only screen and (min-width:1400px) and (max-width:1500px) {
+    .container::after {
+        background-position: 25px 60%;
+    }
+
+    .project-body {
+
+        grid-column-gap: 0;
+        grid-row-gap: 2rem;
+        justify-items: center;
+    }
+
+    .project-body div:nth-of-type(4),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(8) {
+        justify-self: center;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(7) {
+        justify-self: center;
+    }
+
+    .project-box {
+        width: 29.5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(28.5 * 2.2rem) !important;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about about'
+            'img img img about about'
+            'img img img hobbies hobbies'
+            'img img img hobbies hobbies'
+            'img img img gap gap'
+            'img img img gap gap';
+    }
+}
+
+@media only screen and (min-width:1300px) and (max-width:1400px) {
+    html {
+        font-size: 9.5px;
+    }
+
+    .container::after {
+        background: url('../img/portfolio1.png') 25px top/cover no-repeat;
+    }
+
+    #navbar {
+        padding: 3rem 17rem;
+    }
+
+    .main-container {
+        padding: 0 17rem;
+    }
+
+    .project-body {
+        grid-column-gap: 0;
+        grid-row-gap: 2rem;
+        justify-items: center;
+    }
+
+    .project-body div:nth-of-type(4),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(8) {
+        justify-self: center;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(7) {
+        justify-self: center;
+    }
+
+    .project-box {
+        width: 28.5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(28.5 * 2.2rem) !important;
+    }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1300px) {
+    html {
+        font-size: 9.2px;
+    }
+
+    .container::after {
+        background: url('../img/portfolio1.png') 25px top/cover no-repeat;
+    }
+
+    #navbar {
+        padding: 3rem 14rem;
+    }
+
+    .main-container {
+        padding: 0 14rem;
+    }
+
+    .project-body {
+
+        grid-column-gap: 0;
+        grid-row-gap: 2rem;
+        justify-items: center;
+    }
+
+    .project-body div:nth-of-type(4),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(8) {
+        justify-self: center;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(7) {
+        justify-self: center;
+    }
+
+    .project-box {
+        width: 26.5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(26.5 * 2.2rem) !important;
+    }
+}
+
+@media only screen and (min-width:1100px) and (max-width:1200px) {
+    html {
+        font-size: 9.2px;
+    }
+
+    .container::after {
+        background: url('../img/portfolio3.png') 25px 50%/cover no-repeat;
+    }
+
+    #navbar {
+        padding: 3rem 12rem;
+    }
+
+    .main-container {
+        padding: 0 12rem;
+    }
+
+    .project-body {
+
+        grid-column-gap: 0;
+        grid-row-gap: 2rem;
+        justify-items: center;
+    }
+
+    .project-body div:nth-of-type(4),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(8) {
+        justify-self: center;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(7) {
+        justify-self: center;
+    }
+
+    .project-box {
+        width: 24.5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(23.5 * 2.2rem) !important;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about about'
+            'img img img about about'
+            'img img img hobbies hobbies'
+            'img img img hobbies hobbies'
+            'img img img gap gap'
+            'img img img gap gap';
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1100px) {
+    html {
+        font-size: 9px;
+    }
+
+    .container::after {
+        background: url('../img/portfolio3.png') 25px 40%/cover no-repeat;
+    }
+
+    #navbar {
+        padding: 3rem 9.5rem;
+    }
+
+    .main-container {
+        padding: 0 9.5rem;
+    }
+
+    .project-body {
+
+        grid-column-gap: 0;
+        grid-row-gap: 2rem;
+        justify-items: center;
+    }
+
+    .project-body div:nth-of-type(4),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(8) {
+        justify-self: center;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(7) {
+        justify-self: center;
+    }
+
+    .project-box {
+        width: 22.5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(22.5 * 2.2rem) !important;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about about'
+            'img img img about about'
+            'img img img hobbies hobbies'
+            'img img img hobbies hobbies'
+            'img img img gap gap'
+            'img img img gap gap';
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width:1000px) {
+    html {
+        font-size: 8.6px;
+    }
+    .container::after {
+        background: url(../img/portfolio3.png) 30% 100%/cover no-repeat;
+    }
+
+
+    #navbar {
+        padding: 3rem 7.7rem;
+    }
+
+    /* 
+       #menu{
+        display: block;
+    }
+    
+    #navbar p{
+        position: absolute;
+        right: 95px;
+        top: 50%;
+        padding: 0%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    #navbar #link {
+  
+        right: 0px;
+        position: absolute;
+        top: 100%;
+    }
+    #navbar ul {
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 200px;
+        display: block;
+        padding: 0 9.5rem;
+        background-color: white;
+        transition: 0.3s ease-out;
+    }
+    #navbar ul li {
+        line-height: 30px;
+        
+    }
+    #navbar ul li a {
+        color: black;
+    } */
+    .main-container {
+        padding: 0 7.7rem;
+    }
+
+    .project-body {
+
+        grid-column-gap: 0;
+        grid-row-gap: 2rem;
+        justify-items: center;
+    }
+
+    .project-body div:nth-of-type(4),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(8) {
+        justify-self: center;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(7) {
+        justify-self: center;
+    }
+
+    .project-box {
+        width: 21.5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(21.5 * 2.2rem) !important;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about about'
+            'img img img about about'
+            'img img img hobbies hobbies'
+            'img img img hobbies hobbies'
+            'img img img gap gap'
+            'img img img gap gap';
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+}
+
+@media only screen and (min-width:700px) and (max-width:900px) {
+    html {
+        font-size: 8.6px;
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+
+    .main-container {
+        padding: 0 6rem;
+    }
+
+    #navbar {
+        background-color: black;
+        color: white;
+        padding: 2.4rem 7.7rem;
+    }
+    .home-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-wrapper p{
+        font-size: 2.5rem;
+    }
+    .home-wrapper h1{
+        font-size: 4rem;
+        color: white;
+    }
+    .home-wrapper a{
+        font-size: 2.5rem;
+    }
+  
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
+
+    .links {
+        line-height: 3.7rem;
+        letter-spacing: 0.15rem;
+    }
+
+    #navbar h1 a {
+        color: white;
+
+    }
+
+    .container {
+        transition: 0.3s ease-out;
+        position: relative;
+    }
+
+    .container::after {
+        width: 100%;
+        background: url(../img/phone_portfolio.png) 100% 100%/cover no-repeat;
+    }
+
+    .project-body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .project-box {
+        width: 23rem;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(2),
+    .project-body div:nth-of-type(3),
+    .project-body div:nth-of-type(4) {
+        margin-left: 5rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(24 * 2rem) !important;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about'
+            'img img img about'
+            'img img img hobbies'
+            'img img img hobbies'
+            'img img img gap ';
+
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #navbar p {
+        position: absolute;
+        right: 95px;
+        top: 50%;
+        padding: 0%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    #navbar #link {
+        right: 0px;
+        position: absolute;
+        top: 100%;
+    }
+
+    #navbar ul {
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 215px;
+        display: block;
+        padding: 0 9.5rem;
+        background-color: black;
+        transition: 0.3s ease-out;
+    }
+
+    #navbar ul li {
+        line-height: 30px;
+
+    }
+
+    #navbar ul li a {
+        color: white;
+    }
+
+    .About-me {
+        padding: 5rem 0 3rem 7rem;
+    }
+
+    .hobbies {
+        padding: 0rem 0 2rem 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+
+    .img {
+        height: 100%;
+    }
+
+    .contact-details {
+        padding: 1rem 0 0 5rem;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+    }
+
+    .footer-wrapper {
+        padding: 0 12rem;
+    }
+
+}
+
+@media only screen and (min-width:600px) and (max-width:700px) {
+    html {
+        font-size: 8.1px;
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+
+    .main-container {
+        padding: 0 4.7rem;
+    }
+
+    #navbar {
+        background-color: black;
+        color: white;
+        padding: 2.4rem 7.7rem;
+    }
+
+    .links {
+        line-height: 3.7rem;
+        letter-spacing: 0.15rem;
+    }
+
+    #navbar h1 a {
+        color: white;
+
+    }
+
+    .container {
+        transition: 0.3s ease-out;
+        position: relative;
+    }
+
+    .container::after {
+        width: 100%;
+        background: url(../img/phone_portfolio.png) -50px 100%/cover no-repeat;
+    }
+
+    .project-body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .project-box {
+        width: 23rem;
+    }
+
+    .project-body div:nth-of-type(1),
+    .project-body div:nth-of-type(2),
+    .project-body div:nth-of-type(3),
+    .project-body div:nth-of-type(4) {
+        margin-left: 2rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(24 * 2rem) !important;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about'
+            'img img img about'
+            'img img img hobbies'
+            'img img img hobbies'
+            'img img img gap ';
+
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #navbar p {
+        position: absolute;
+        right: 95px;
+        top: 50%;
+        padding: 0%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    #navbar #link {
+        right: 0px;
+        position: absolute;
+        top: 100%;
+    }
+
+    #navbar ul {
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 215px;
+        display: block;
+        padding: 0 9.5rem;
+        background-color: black;
+        transition: 0.3s ease-out;
+    }
+
+    #navbar ul li {
+        line-height: 30px;
+
+    }
+
+    #navbar ul li a {
+        color: white;
+    }
+
+    .About-me {
+        padding: 5rem 0 3rem 3rem;
+    }
+
+    .hobbies {
+        padding: 0rem 0 2rem 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+
+    .img {
+        height: 100%;
+    }
+
+    .contact-details {
+        padding: 1rem 0 0 5rem;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+    }
+
+    .footer-wrapper {
+        padding: 0 12rem;
+    }
+
+}
+
+@media only screen and (min-width:500px) and (max-width:600px) {
+    html {
+        font-size: 8.1px;
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+
+    .main-container {
+        padding: 0 3.2rem;
+    }
+
+    #navbar {
+        background-color: black;
+        color: white;
+        padding: 2.4rem 5rem;
+    }
+
+    .links {
+        line-height: 3.7rem;
+        letter-spacing: 0.15rem;
+    }
+
+    #navbar h1 a {
+        color: white;
+
+    }
+
+    .container {
+        transition: 0.3s ease-out;
+        position: relative;
+    }
+
+    .container::after {
+        width: 100%;
+        background: url(../img/phone_portfolio.png) 100% 100%/cover no-repeat;
+    }
+
+    .container p {
+        font-size: 2rem;
+    }
+
+    .container a {
+        font-size: 1.8rem;
+    }
+
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
+
+    .container h1 {
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .project-box {
+        width: 23rem;
+    }
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(24 * 2rem) !important;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about'
+            'img img img about'
+            '. . . .'
+            'hobbies hobbies hobbies hobbies';
+
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #navbar p {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        padding: 0%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    #navbar #link {
+        right: 0px;
+        position: absolute;
+        top: 100%;
+    }
+
+    #navbar ul {
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 215px;
+        display: block;
+        padding: 0 5rem;
+        background-color: black;
+        transition: 0.3s ease-out;
+    }
+
+    #navbar ul li {
+        line-height: 30px;
+
+    }
+
+    #navbar ul li a {
+        color: white;
+    }
+
+    .About-me {
+        padding: 3rem 0 3rem 3rem;
+    }
+
+    .hobbies {
+        padding: 2rem 0 2rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+
+    .img {
+        height: 95%;
+    }
+
+    .contact-details {
+        padding: 1rem 0 0 5rem;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+    }
+
+    .footer-wrapper {
+        padding: 0 12rem;
+    }
+
+    .contact-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .contactme-wrapper {
+        flex-basis: 100%;
+    }
+
+    .contact-details {
+        padding: 2rem 0 0 2rem;
+        flex-basis: 90%;
+    }
+
+    .box {
+        margin-bottom: 10rem;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:500px) {
+    html {
+        font-size: 7px;
+    }
+
+    .paragraph {
+        word-break: normal;
+    }
+
+    .main-container {
+        padding: 0 3.2rem;
+    }
+
+    #navbar {
+        background-color: black;
+        color: white;
+        padding: 2.4rem 5rem;
+    }
+
+    .links {
+        line-height: 3.7rem;
+        letter-spacing: 0.15rem;
+    }
+
+    #navbar h1 a {
+        color: white;
+
+    }
+
+    .container {
+        transition: 0.3s ease-out;
+        position: relative;
+    }
+
+    .container::after {
+        width: 100%;
+        background: url(../img/phone_portfolio1.png) 100% 100%/cover no-repeat;
+    }
+
+    .container p {
+        font-size: 2rem;
+    }
+
+    .container a {
+        font-size: 1.8rem;
+    }
+
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
+
+    .container h1 {
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .project-box {
+        width: 23rem;
+    }
+
+
+    .project-body div:nth-of-type(5),
+    .project-body div:nth-of-type(6),
+    .project-body div:nth-of-type(7),
+    .project-body div:nth-of-type(8) {
+        width: calc(24 * 2rem) !important;
+        margin: 0 auto;
+    }
+
+    .wrapper {
+        grid-template-areas:
+            'img img img about'
+            'img img img about'
+            'hobbies hobbies hobbies hobbies';
+
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #navbar p {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        padding: 0%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    #navbar #link {
+        right: 0px;
+        position: absolute;
+        top: 100%;
+    }
+
+    #navbar ul {
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 215px;
+        display: block;
+        padding: 0 5rem;
+        background-color: black;
+        transition: 0.3s ease-out;
+    }
+
+    #navbar ul li {
+        line-height: 30px;
+
+    }
+
+    #navbar ul li a {
+        color: white;
+    }
+
+    .About-me {
+        padding: 3rem 0 3rem 3rem;
+    }
+
+    .hobbies {
+        padding: 2rem 0 2rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+
+    .img {
+        height: 50%;
+    }
+
+    .contact-details {
+        padding: 1rem 0 0 5rem;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+    }
+
+    .footer-wrapper {
+        padding: 0 3rem;
+    }
+
+    .contact-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .contactme-wrapper {
+        flex-basis: 100%;
+    }
+
+    .contact-details {
+        padding: 2rem 0 0 2rem;
+        flex-basis: 90%;
+    }
+
+    .box {
+        margin-bottom: 10rem;
+    }
+
+    .skill-circle {
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    }
+
+    .circle-box {
+        height: 28rem;
+    }
+
+    .service-box {
+        padding: 2rem 2rem;
+        height: fit-content;
+        box-sizing: content-box;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .contact-me form {
+        grid-template-areas:
+            'one one one one'
+            'two two two two'
+            'three three three three'
+            'four four four four'
+            'five five . .';
+    }
+
+    .Myskill p:last-child {
+        text-align: center;
+    }
+}
